@@ -1,0 +1,32 @@
+<section class="authorized-user complete profile">
+  <div class="row">
+    <div class="col-12" *ngIf="user">
+      <mat-card class="mat-elevation-z18 profile-card">
+        <mat-card-header>{{ user.username }}</mat-card-header>
+        <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+        <mat-card-content>
+          <mat-form-field class="container">
+            <mat-label for="last_name">{{ items002 }}</mat-label>
+            <input matInput type="text" name="last_name" id="last_name" [(ngModel)]="user.last_name" class="form-control block last_name">
+          </mat-form-field>
+
+          <mat-form-field class="container">
+            <mat-label for="first_name">{{ items003 }}</mat-label>
+            <input matInput type="text" name="first_name" id="first_name" [(ngModel)]="user.first_name" class="form-control block first_name">
+          </mat-form-field>
+
+          <mat-form-field class="container">
+            <mat-label for="email">{{ items001 }}</mat-label>
+            <input matInput type="text" name="email" id="email" [(ngModel)]="user.email" class="form-control block email">
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+
+          <a mat-raised-button [routerLink]="['/admin']" routerLinkActive="router-link-active" class="btn btn-block block btn-all-users">{{ actionButton00 }}</a>
+          <button mat-raised-button type="submit" (click)="updateProfile()" class="btn btn-block block btn-update">{{ actionButton01 }}</button>
+        </mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

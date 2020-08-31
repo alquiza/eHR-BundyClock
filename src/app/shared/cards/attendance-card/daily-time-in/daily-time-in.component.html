@@ -1,0 +1,18 @@
+<br><br>
+<section class="container attendance daily-in">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="mat-elevation-z16">
+        <mat-card-content>
+          <div class="container">
+            <mat-label for="employee_id">{{ employee_identity }}</mat-label>
+            <input matInput type="text" [(ngModel)]="dailyIn.employee_id" name="employee_id" id="employee_id" required class="form-control block container content employee_id">
+            <br><button mat-raised-button type="submit" (click)="timeInDailyIns()" class="btn btn-block block btn-time-in mat-elevation-z16" style="width: 50%; margin: auto;">{{ timeIn }}</button>
+          </div>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>
+<br><br>

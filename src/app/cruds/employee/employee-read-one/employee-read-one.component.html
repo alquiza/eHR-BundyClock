@@ -1,0 +1,39 @@
+<section class="employee-basic container">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="mat-elevation-z18">
+        <mat-card-header>
+          <mat-card-title>{{ employee.last_name }},&nbsp;{{ employee.first_name }}</mat-card-title>
+          <mat-card-subtitle>{{ employee.employee_id }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field class="container">
+            <mat-label for="employee_id">{{ items000 }}</mat-label>
+            <input matInput type="text" [(ngModel)]="employee.employee_id" class="form-control block employee_id">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="last_name">{{ items001 }}</mat-label>
+            <input matInput type="text" name="last_name" id="last_name" [(ngModel)]="employee.last_name" class="form-control block last_name">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="first_name">{{ items002 }}</mat-label>
+            <input matInput type="text" name="first_name" id="first_name" [(ngModel)]="employee.first_name" class="form-control block first_name">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="gender">{{ items003 }}</mat-label>
+            <input matInput type="text" name="gender" id="gender" [(ngModel)]="employee.gender" class="form-control block gender">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="birthday">{{ items004 }}</mat-label>
+            <input matInput type="date" name="birthday" id="birthday" [(ngModel)]="employee.birthday" class="form-control block birthday">
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button [routerLink]="['/admin/employees/']" routerLinkActive="router-link-active">{{ actionButton00 }}</a>
+          <button mat-raised-button type="submit" (click)="updateProfile()" class="btn btn-block block btn-update">{{ actionButton01 }}</button>
+        </mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

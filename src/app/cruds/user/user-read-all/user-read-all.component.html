@@ -1,0 +1,33 @@
+<section class="all-authusers">
+  <div class="row">
+    <div class="col-9" style="margin: 1.5em auto;">
+      <mat-card class="mat-elevation-z16 all-user-card">
+        <mat-card-header>
+          <mat-card-title>{{ authUserTitle }}</mat-card-title>
+          <mat-card-subtitle>{{ authUserSubtitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <table class="table table-striped mat-elevation-z10">
+            <thead>
+              <td *ngFor="let userHeaderLabel of userHeaderLabels" class="header-title">{{ userHeaderLabel.name }}</td>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                  <button mat-raised-button type="submit" (click)="userDetails(user.id)" class="btn btn-detail mat-elevation-z16">{{ actionButton00 }}</button>
+                  <button mat-raised-button type="submit" (click)="deleteUser(user.id)" class="btn btn-delete mat-elevation-z16">{{ actionButton01 }}</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

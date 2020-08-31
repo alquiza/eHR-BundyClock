@@ -1,0 +1,27 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'push' : 'side'"
+    [opened]="true">
+    <mat-toolbar> <a [routerLink]="['/admin']" routerLinkActive="router-link-active">{{ adminSideNavTitle }}</a></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/admin']" routerLinkActive="router-link-active">{{ sideNavList00 }}</a>
+      <a mat-list-item [routerLink]="['auth/add']" routerLinkActive="router-link-active">{{ sideNavList01 }}</a>
+      <a mat-list-item [routerLink]="['identities']" routerLinkActive="router-link-active">{{ sideNavList02 }}</a>
+      <a mat-list-item [routerLink]="['ids/add']" routerLinkActive="router-link-active">{{ sideNavList03 }}</a>
+      <a mat-list-item [routerLink]="['employees']" routerLinkActive="router-link-active">{{ sideNavList04 }}</a>
+      <a mat-list-item [routerLink]="['employees/add']" routerLinkActive="router-link-active">{{ sideNavList05 }}</a>
+      <a mat-list-item [routerLink]="['attendances']" routerLinkActive="router-link-active">{{ sideNavList06 }}</a>
+    </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <button type="button" mat-icon-button
+        aria-label="Toggle sidenav" (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="" style="margin-left: 2em; margin-right: 2em;">
+        <router-outlet></router-outlet>
+      </div>
+      <footer></footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

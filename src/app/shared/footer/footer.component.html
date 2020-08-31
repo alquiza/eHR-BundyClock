@@ -1,0 +1,16 @@
+<section class="footer" style="bottom: 0; text-align: center; align-items: center;">
+  <div class="row">
+    <div class="col-7"><hr></div>
+    <div class="col-5">
+      <p>Footer Rocks!</p>
+      <ul>
+        <li *ngFor="let project of projects">{{ project.title }}</li>
+        <li *ngFor="let project of projects">{{ footerNote00 }}&copy;{{ project.year }}</li>
+        <li>{{ footerNote01 }}</li>
+        <li *ngFor="let principal of principals">{{ principal.name }}</li>
+        <li *ngFor="let principal of principals">{{ principal.url }}&nbsp;&middot;&nbsp;{{ principal.email </li>
+        <li *ngFor="let contractor of contractors">{{ contractor.name }}&nbsp;|&nbsp;{{ contractor.email }}&nbsp;&middot;&nbsp;{{ contractor.mobile }}</li>
+      </ul>
+    </div>
+  </div>
+</section>

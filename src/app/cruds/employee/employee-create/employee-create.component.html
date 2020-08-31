@@ -1,0 +1,86 @@
+<section class="add-employee">
+  <div class="row">
+    <div class="col-12" style="margin: 5.0em auto;">
+      <mat-card class="mat-elevation-z18" style="width: 100%;">
+        <mat-card-header>
+          <mat-card-title>{{ addEmployeeAppTitle }}</mat-card-title>
+          <mat-card-subtitle>{{ addEmployeeAppSubTitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <table class="table table-striped mat-elevation-z10" style="width: 100%;">
+            <thead>
+              <td *ngFor="let tableHead of tableHeads">{{ tableHead.name }}</td>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field class="container">
+                    <mat-label for="employee_id">{{ items000 }}</mat-label>
+                    <mat-select [formControl]="employeeIdControl" [(ngModel)]="identity" required>
+                      <mat-option>---</mat-option>
+                      <mat-option *ngFor="let identity of identities" [value]="employee_id">
+                       {{ identity.employee_id }}
+                      </mat-option>
+                    </mat-select>
+                    <!--
+                    <input matInput type="text" name="employee_id" id="employee_id" [(ngModel)]="employee.employee_id" class="form-control block employee_id" mat-placeholder="Employee ID#/Fingerprint/RFID#s">
+                    -->
+                  </mat-form-field>
+                </td>
+
+                <td>
+                  <mat-form-field class="container">
+                    <mat-label for="last_name">{{ items001 }}</mat-label>
+                    <input matInput type="text" name="last_name" id="last_name" [(ngModel)]="employee.last_name" class="form-control block last_name" mat-placeholder="Surname:">
+                  </mat-form-field>
+                </td>
+
+                <td>
+                  <mat-form-field class="container">
+                    <mat-label for="first_name">{{ items002 }}</mat-label>
+                    <input matInput type="text" name="first_name" id="first_name" [(ngModel)]="employee.first_name" class="form-control block first_name" mat-placeholder="First Name:">
+                  </mat-form-field>
+                </td>
+
+                <td>
+                  <mat-form-field class="container">
+                    <mat-label for="middle_name">{{ items003 }}</mat-label>
+                    <input matInput type="text" name="middle_name" id="middle_name" [(ngModel)]="employee.middle_name" class="form-control block middle_name" mat-placeholder="Middle Name:">
+                  </mat-form-field>
+                </td>
+
+                <td>
+                  <mat-form-field class="container">
+                    <mat-label for="gender">{{ items004 }}</mat-label>
+                    <input matInput type="text" name="gender" id="gender" [(ngModel)]="employee.gender" class="form-control block gender" mat-placeholder="Gender:">
+                  </mat-form-field>
+                </td>
+
+                <td>
+                  <mat-form-field class="container">
+                    <mat-label for="birthday">{{ items004 }}</mat-label>
+                    <input matInput type="date" name="birthday" id="birthday" [(ngModel)]="employee.birthday" class="form-control block birthday" mat-placeholder="Birthday:">
+                  </mat-form-field>
+                </td>
+
+                <td>
+                  <button mat-raised-button type="submit" (click)="employeeNewAdd()" class="btn block add-employee">{{ addButtonName }}</button>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+          <!--
+            <mat-form-field class="container">
+              <mat-label for="">{{ items002 }}</mat-label>
+              <input matInput type="" name="" id="" [(ngModel)]="employee." class="form-control block" placeholder="">
+            </mat-form-field>
+          -->
+          <app-employee-read-all></app-employee-read-all>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

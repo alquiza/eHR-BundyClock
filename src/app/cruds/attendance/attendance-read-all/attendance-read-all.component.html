@@ -1,0 +1,44 @@
+<section class="attendance-all container">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="mat-elevation-z20">
+        <mat-card-header></mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-md-6" style="margin: 1em auto;">
+              <table class="table table-striped mat-elevation-z10">
+                <thead>
+                  <td *ngFor="let tableLabelIN of tableLabelINs">{{ tableLabelIN.titleIN }}</td>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let dailyIn of dailyIns">
+                    <td>{{ dailyIn.time_in | date:'yyyy-MM-dd' }}</td>
+                    <td>{{ dailyIn.employee_id }}</td>
+                    <td>{{ dailyIn.time_in | date:'HH:mm:ss' }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="col-md-6"><br>
+              <table class="table table-striped mat-elevation-z10">
+                <thead>
+                  <td *ngFor="let tableLabelOUT of tableLabelOUTs">{{ tableLabelOUT.titleOUT }}</td>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let dailyOut of dailyOuts">
+                    <td>{{ dailyOut.time_out | date: 'yyyy-MM-dd'}}</td>
+                    <td>{{ dailyOut.employee_id }}</td>
+                    <td>{{ dailyOut.time_out | date:'HH:mm:ss' }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

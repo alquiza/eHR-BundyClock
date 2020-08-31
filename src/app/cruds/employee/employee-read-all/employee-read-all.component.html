@@ -1,0 +1,30 @@
+<section class="all-employees container">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="mat-elevation-z16">
+        <mat-card-header></mat-card-header><hr>
+        <mat-card-content>
+          <table class="table table-striped all-employee-table mat-elevation-z10">
+            <thead class="header-title">
+              <td *ngFor="let tableHead of tableHeads">{{ tableHead.name }}</td>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees">
+
+                <td>{{ employee.employee_id }}</td>
+                <td>{{ employee.last_name }}</td>
+                <td>{{ employee.first_name }}</td>
+                <td>
+                  <button mat-raised-button type="submit" (click)="employeeDetail(employee.employee_id)" class="btn btn-detail mat-elevation-z16">{{ actionButton00 }}</button>
+                  <button mat-raised-button type="submit" (click)="deleteThisEmployee(employee.employee_id)" class="btn btn-delete mat-elevation-z16">{{ actionButton01 }}</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

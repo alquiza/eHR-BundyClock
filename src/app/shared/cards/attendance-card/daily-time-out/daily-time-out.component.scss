@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > *{
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+input {
+  -moz-appearance: textfield;
+}
+
+.mat-raised-button, .btn-time-out {
+  width: 4em;
+  background: #008080;
+  color: rgb(0, 248, 248);
+  border-radius: 2.00em;
+  margin-right: 0.50em;
+  &:hover {
+    text-decoration: none;
+    background: #006666;
+    color: rgb(0, 248, 248);
+  }
+}
+
+mat-card {
+  background: #b2d8d8;
+}

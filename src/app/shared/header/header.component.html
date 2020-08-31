@@ -1,0 +1,8 @@
+<mat-toolbar class="mat-elevation-z24 expanded-lg fixed-top">
+  <span><h3>{{ appTitle }}</h3></span>
+  <div class="headerButtons">
+    <span><a mat-raised-button class="btn mat-elevation-z24" href="">{{ headButton00 }}</a></span>
+    <span><a mat-raised-button class="btn mat-elevation-z24" [routerLink]="['/login']" routerLinkActive="router-link-active">{{ headButton01 }}</a></span>
+    <span><a mat-raised-button class="btn mat-elevation-z24" href="">{{ headButton02 }}</a></span>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,43 @@
+mat-toolbar,
+mat-sidenav-content {
+  background: #b2d8d8;
+  color: #004c4c;
+}
+
+.sidenav, mat-toolbar {
+  background: #006666;
+  color: #66b2b2;
+  margin-top: 2.0em;
+  padding-left: 0.85em;
+}
+
+mat-toolbar {
+  text-align: center;
+}
+
+mat-sidenav-content {
+  background: #66b2b2;
+}
+
+.sidenav {
+  width: 20em;
+}
+
+mat-nav-list {
+  background: #006666;
+  color: #66b2b2;
+}
+
+a.mat-list-item {
+  background: #006666;
+  color: #66b2b2;
+  &:hover{
+    background: #66b2b2;
+    color: #004c4c;
+  }
+}
+
+mat-sidenav-content {
+  background: #66b2b2;
+  color: #004c4c;
+}

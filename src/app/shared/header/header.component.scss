@@ -1,0 +1,18 @@
+mat-toolbar.expanded-lg {
+  width: 100%;
+  background: #006666;
+  color: rgb(0, 248, 248);
+}
+
+.mat-raised-button {
+  width: 8.00em;
+  background: #008080;
+  color: rgb(0, 248, 248);
+  border-radius: 2.00em;
+  margin-right: 0.50em;
+  &:hover {
+    text-decoration: none;
+    background: #006666;
+    color: rgb(0, 248, 248);
+  }
+}

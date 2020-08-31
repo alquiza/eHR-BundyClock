@@ -1,0 +1,44 @@
+<section class="employee-identity content">
+  <div class="row">
+    <div class="col-7 all-identities-refreshed" style="margin: 7.0em auto;">
+      <app-identity-read-all></app-identity-read-all>
+    </div>
+
+    <div class="col-4" style="margin: 7.0em auto;">
+      <mat-card class="mat-elevation-z18">
+        <mat-card-header class="header-title">
+          <mat-card-title>{{ addIdentityAppTitle }}</mat-card-title>
+          <mat-card-subtitle>{{ addIdentityAppSubTitle }}</mat-card-subtitle>
+        </mat-card-header><hr>
+        <mat-card-content>
+          <mat-form-field class="container">
+            <mat-label for="employee_id">{{ items000 }}</mat-label>
+            <input matInput type="text" name="employee_id" id="employee_id" [(ngModel)]="identity.employee_id" class="form-control block employee_id" required autofocus placeholder="Employee ID#/Fingerprint/RFID#s">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="social_id">{{ items001 }}</mat-label>
+            <input matInput type="text" name="social_id" id="social_id" [(ngModel)]="identity.social_id" class="form-control block social_id" placeholder="SSS ID#">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="health_id">{{ items002 }}</mat-label>
+            <input matInput type="text" name="health_id" id="health_id" [(ngModel)]="identity.health_id" class="form-control block health_id" placeholder="PhilHealth Member#">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="housing_id">{{ items003 }}</mat-label>
+            <input matInput type="text" name="housing_id" id="housing_id" [(ngModel)]="identity.housing_id" class="form-control block housing_id" placeholder="HDMF Member ID#">
+          </mat-form-field>
+          <mat-form-field class="container">
+            <mat-label for="tax_id">{{ items004 }}</mat-label>
+            <input matInput type="text" name="tax_id" id="tax_id" [(ngModel)]="identity.tax_id" class="form-control block tax_id" placeholder="Tax ID#">
+          </mat-form-field>
+        </mat-card-content>
+      <br>
+        <mat-card-actions>
+          <button mat-raised-button type="submit" (click)="addIdentities()" class="btn btn-block block submit mat-elevation-z16">{{ addButtonName }}</button>
+        </mat-card-actions>
+      <br><br>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+mat-card-header, .header-title{
+  font-weight: bolder;
+}
+
+.mat-raised-button {
+  width: 50%;
+  background: #008080;
+  color: rgb(0, 248, 248);
+  border-radius: 2.00em;
+  &:hover {
+    text-decoration: none;
+    background: #006666;
+    color: rgb(0, 248, 248);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > *{
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+input {
+  -moz-appearance: textfield;
+}
